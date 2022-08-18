@@ -10,8 +10,7 @@ import { ApiServiceService } from './api-service.service';
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
+  imports: [BrowserModule,
     AppRoutingModule,MatTableModule,
     BrowserAnimationsModule,MatSlideToggleModule,
 
