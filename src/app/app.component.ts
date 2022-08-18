@@ -8,22 +8,13 @@ const ELEMENT_DATA:Data[]=[];
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-//   title = 'newProject';
-//   sortBooks=[];
-//   displayedColumns:string[]=['author','birthday','birthplace','books'];
-//   dataSource:any[]=[];
-//   constructor(private service:ApiServiceService){
-//     this.service.getData().then((data)=>{
-//       this.dataSource=data;
-//     });
-//   }
-displayedColumns: string[] = ["id", "userId", "title", "completed"];
-
-  dataSource: any[] = [];
-
-  constructor(private service: ApiServiceService) {
-    this.service.getData().then(data => {
-      this.dataSource = data;
+  title = 'newProject';
+  sortBooks=[];
+  displayedColumns:string[]=['author','birthday','birthplace','books'];
+  dataSource:any[]=[];
+  constructor(private service:ApiServiceService){
+    this.service.getData().then((data)=>{
+      this.dataSource=data;
     });
   }
 }
