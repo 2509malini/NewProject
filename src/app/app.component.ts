@@ -9,9 +9,10 @@ const ELEMENT_DATA:Data[]=[];
 })
 export class AppComponent {
   title = 'newProject';
+  status = 'success';
   displayedColumns:string[]=['title','PublishDate','purchaseLink','imageUrl'];
   dataSource:any[]=[];
-
+  data:any[]=[];
   constructor(private service:ApiServiceService){
     this.service.getData().then((data)=>{
       this.dataSource=data;
