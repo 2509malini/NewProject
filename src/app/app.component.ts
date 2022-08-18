@@ -7,19 +7,13 @@ const ELEMENT_DATA:Data[]=[];
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'newProject';
   sortBooks=[];
   displayedColumns:string[]=['author','birthday','birthPlace','books'];
   dataSource:any[]=[];
-  constructor(private service:ApiServiceService){
-    
-  }
-
-  ngOnInit(): void {
-    this.service.getData().then((data)=>{
-      this.dataSource=data.data;
-      console.log(data.data)
-    });
-  }
+  constructor(private service:ApiServiceService){this.service.getData().then((data)=>{
+      this.dataSource=data;
+  });
+}
 }
