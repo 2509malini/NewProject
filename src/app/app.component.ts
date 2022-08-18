@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import { Data } from '@angular/router';
+import { ApiServiceService } from './api-service.service';
+const ELEMENT_DATA:Data[]=[];
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newProject';
+  displayedColumns:string[]=['title','PublishDate','purchaseLink','imageUrl'];
+  dataSource:any[]=[];
+
+  constructor(private service:ApiServiceService){
+    this.service.getData().then((data)=>{
+      this.dataSource=data;
+    });
+  }
+
 }

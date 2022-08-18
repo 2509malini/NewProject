@@ -1,0 +1,20 @@
+<table mat-table [dataSource]="dataSource" class="mat-e;evation-z8" >
+  <ng-container matColumnDef="title" >
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let element" >{{element.id}}</td>
+  </ng-container>
+  <ng-container matColumnDef="PublishDate" >
+    <th mat-header-cell *matHeaderCellDef>PublishDate</th>
+    <td mat-cell *matCellDef="let element" >{{element.PublishDate}}</td>
+  </ng-container>
+  <ng-container matColumnDef="purchaseLink" >
+    <th mat-header-cell *matHeaderCellDef>PurchaseLink</th>
+    <td mat-cell *matCellDef="let element" >{{element.purchaseLink}}</td>
+  </ng-container> 
+  <ng-container matColumnDef="imageUrl" >
+    <th mat-header-cell *matHeaderCellDef>ImageUrl</th>
+    <td mat-cell *matCellDef="let element" >{{element.imageUrl}}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+  <tr mat-row *matRowDef="letrow;columns:displayedColumns" ></tr>
+</table>
