@@ -13,7 +13,6 @@ import { ApiServiceService } from './api-service.service';
   imports: [BrowserModule,
     AppRoutingModule,MatTableModule,
     BrowserAnimationsModule,MatSlideToggleModule,
-
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]
